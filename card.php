@@ -172,6 +172,14 @@ while ($foundk = mysqli_fetch_array($retrieve)) {
 						else 
 							$imageSrc = "admin/images/profile.jpg";
 					}
+					if (filter_var($signature, FILTER_VALIDATE_URL)) {
+						$imageSrc1 = $signature;
+					} else {
+						if ($signature != "")
+							$imageSrc1 = 'images/'. $signature;
+						else 
+							$imageSrc1 = "admin/images/signature.png";
+					}
 
 				?>
 				</center>
@@ -201,7 +209,16 @@ while ($foundk = mysqli_fetch_array($retrieve)) {
 <p style="margin-top:20%">&nbsp;</p>
     
     <p style="position: absolute; top: 0; left: 58%; margin-top:114%; font-size:9px; font-family: 'Lora';"><?php if(isset($id)){ echo$id;} ?></p>
-	
+	<?php
+             	 	if($imageSrc1!=""){          
+						echo "<img src='images/$signature' height='40px' width='140px' alt='' style='margin-left:20%; margin-top:0%;'>";
+   
+									    }
+								else{
+									echo"<img src='admin/images/signature.png' height='150px' width='160px' alt='' style='border: 2px solid black;'>";	   
+														     	
+									} 
+             	 	 ?>  
 		  <p style="margin-top:-4%">&nbsp;</p>
       	<p style="margin-top:-4%">&nbsp;</p>
        <p style="margin-top:-4%">&nbsp;</p>
