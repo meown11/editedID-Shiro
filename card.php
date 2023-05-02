@@ -201,11 +201,13 @@ while ($foundk = mysqli_fetch_array($retrieve)) {
 	  <p style="margin-top:-4%">&nbsp;</p>
 							
 	  <div style="position: absolute; left: 27%; top: 67%; margin-left:0%; margin-top:-3%; font-size:18px; font-family: 'Lora';">
-  <span style="font-size:24px;"><?php if(isset($firstName)){echo $firstName;} ?></span>
-  <span><?php if(isset($lastName)){echo $lastName;} ?></span>
+	  <span style="font-size:24px;"><?php if(isset($firstName)){echo $firstName;} ?></span></div>
+	  <div style="position: absolute; left: 27%; top: 67%; margin-left:0%; margin-top:-3%; font-size:18px; font-family: 'Lora';">
+  <span><br><?php if(isset($lastName)){echo $lastName;} ?></span>
   <br>
-  <span style="position: absolute; left: 5%; font-size:10px; font-family: 'Lora';"><?php if(isset($position)){echo $position;} ?></span>
+
 </div>
+<span style="position: absolute; left: 27%;top: 75%; font-size:9px; font-family: 'Lora';"><?php if(isset($position)){echo $position;} ?></span>
 <p style="margin-top:20%">&nbsp;</p>
     
     <p style="position: absolute; top: 0; left: 58%; margin-top:114%; font-size:9px; font-family: 'Lora';"><?php if(isset($id)){ echo$id;} ?></p>
